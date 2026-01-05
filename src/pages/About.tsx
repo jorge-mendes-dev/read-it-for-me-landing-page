@@ -52,7 +52,7 @@ export default function About() {
               variants={fadeInUp}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-3xl font-bold mb-4 text-gray-800 dark:text-white">� User Interface</h2>
+              <h2 className="text-3xl font-bold mb-4 text-gray-800 dark:text-white">User Interface</h2>
               <div className="grid md:grid-cols-2 gap-6 mb-8">
                 <motion.div 
                   className="bg-white dark:bg-slate-700 p-4 rounded-lg shadow-md"
@@ -86,7 +86,7 @@ export default function About() {
               variants={fadeInUp}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-3xl font-bold mb-4 text-gray-800 dark:text-white">�🛠️ Tech Stack</h2>
+              <h2 className="text-3xl font-bold mb-4 text-gray-800 dark:text-white">🛠️ Tech Stack</h2>
               <div className="bg-white dark:bg-slate-700 p-6 rounded-lg shadow-md mb-8 transition-colors duration-300">
               <ul className="space-y-3 text-gray-700 dark:text-gray-300">
                 <li className="flex items-start">
