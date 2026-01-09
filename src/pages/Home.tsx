@@ -76,7 +76,7 @@ export default function Home() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.6 }}
           >
-            Natural text-to-speech with smart language detection and premium voice selection
+            AI-powered voice selection and smart language detection for the most natural listening experience
           </motion.p>
           <motion.p 
             className="text-base md:text-lg mb-12 max-w-3xl mx-auto text-blue-100 leading-relaxed"
@@ -154,7 +154,7 @@ export default function Home() {
               Everything You Need
             </h2>
             <p className="text-center text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
-              Powerful features designed for accessibility, productivity, and language learning
+              Privacy-First • 30+ Languages • Premium AI-Selected Voices
             </p>
           </motion.div>
           
@@ -178,12 +178,12 @@ export default function Home() {
               variants={stagger}
             >
               {[
-                { icon: "👆", title: "One-Click Reading", desc: "Select text and click the floating button to start reading instantly" },
-                { icon: "🌍", title: "Smart Language Detection", desc: "Automatically detects and speaks 30+ languages with flag emojis" },
-                { icon: "⚡", title: "Premium Voice Selection", desc: "Prioritizes Neural, Premium, and Enhanced voices with quality indicators" },
-                { icon: "📱", title: "Floating Mini-Player", desc: "Draggable controls that follow you across pages with mini mode" },
-                { icon: "📋", title: "Reading Queue", desc: "Add multiple text selections to read sequentially" },
-                { icon: "🔒", title: "Privacy-Focused", desc: "All processing happens locally, no data collection" }
+                { icon: "👆", title: "One-Click Reading", desc: "Select any text and click the floating 'Read This' button to start instantly" },
+                { icon: "🌍", title: "Smart Auto-Language Detection", desc: "Automatically detects 30+ languages from page metadata and text patterns" },
+                { icon: "⚡", title: "AI-Powered Voice Selection", desc: "Intelligent voice scoring prioritizes Neural, Premium, and Enhanced voices with ⚡ quality indicators" },
+                { icon: "📱", title: "Draggable Floating Mini-Player", desc: "Persistent controls that follow you across pages with drag-to-reposition" },
+                { icon: "📋", title: "Reading Queue System", desc: "Add multiple text selections that play sequentially" },
+                { icon: "🔒", title: "100% Privacy-First", desc: "All processing happens locally, zero data collection, no external servers" }
               ].map((feature, i) => (
                 <motion.div 
                   key={i}
@@ -218,10 +218,10 @@ export default function Home() {
               variants={stagger}
             >
               {[
-                { icon: "⏩", title: "Speed Control", desc: "Adjust from 0.5x to 2.0x with quick presets (0.75x, 0.9x, 1.0x, 1.25x, 1.5x)" },
-                { icon: "🎵", title: "Pitch & Volume Control", desc: "Fine-tune voice pitch and independent volume adjustment" },
-                { icon: "📊", title: "Progress Tracking", desc: "Real-time progress bar and time estimates" },
-                { icon: "⏯️", title: "Full Controls", desc: "Play, pause, resume, stop, and clear queue" }
+                { icon: "⏩", title: "Speed Control", desc: "0.5x to 2.0x with quick presets (0.75x, 0.9x, 1.0x, 1.25x, 1.5x)" },
+                { icon: "🎵", title: "Pitch & Volume", desc: "Fine-tune voice pitch (0-2 range) and independent volume adjustment" },
+                { icon: "📊", title: "Real-Time Progress", desc: "Visual progress bar with time estimates and auto-recovery" },
+                { icon: "⏯️", title: "Full Playback Controls", desc: "Play, pause, resume, stop, skip, and clear queue" }
               ].map((control, i) => (
                 <motion.div 
                   key={i}
@@ -232,6 +232,45 @@ export default function Home() {
                   <div className="text-3xl mb-4">{control.icon}</div>
                   <h4 className="text-xl font-semibold mb-3 dark:text-white">{control.title}</h4>
                   <p className="text-gray-600 dark:text-gray-300">{control.desc}</p>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+
+          {/* Reading Enhancements */}
+          <div className="mb-20">
+            <motion.h3 
+              className="text-2xl md:text-3xl font-bold mb-10 text-gray-900 dark:text-white flex items-center gap-3"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeInUp}
+            >
+              <span className="text-3xl">✨</span>
+              <span>Reading Enhancements</span>
+            </motion.h3>
+            <motion.div 
+              className="grid md:grid-cols-2 gap-6 md:gap-8"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-50px" }}
+              variants={stagger}
+            >
+              {[
+                { icon: "🎯", title: "Live Word Highlighting", desc: "Real-time word-by-word highlighting during playback with smooth animations" },
+                { icon: "📜", title: "Auto-Scroll Follow Mode", desc: "Optional follow mode that automatically scrolls to highlighted words" },
+                { icon: "🧹", title: "Smart Text Preprocessing", desc: "Converts abbreviations (Dr. → Doctor) and normalizes punctuation for natural speech" },
+                { icon: "📰", title: "Smart Read Full Article", desc: "One-click button to read entire articles with AI content detection" }
+              ].map((feature, i) => (
+                <motion.div 
+                  key={i}
+                  className="group bg-white dark:bg-slate-800 p-8 rounded-2xl border border-gray-200 dark:border-slate-700 hover:border-purple-300 dark:hover:border-purple-600 shadow-sm hover:shadow-2xl transition-all duration-300"
+                  variants={scaleIn}
+                  whileHover={{ y: -8, transition: { duration: 0.3 } }}
+                >
+                  <div className="w-14 h-14 bg-gradient-to-br from-purple-100 to-blue-100 dark:from-purple-900/30 dark:to-blue-900/30 rounded-xl flex items-center justify-center text-3xl mb-5 group-hover:scale-110 transition-transform duration-300">{feature.icon}</div>
+                  <h4 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">{feature.title}</h4>
+                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed">{feature.desc}</p>
                 </motion.div>
               ))}
             </motion.div>
@@ -257,11 +296,12 @@ export default function Home() {
               variants={stagger}
             >
               {[
-                { icon: "🗂️", title: "Collapsible Sections", desc: "Voice selector, playback controls, advanced settings" },
-                { icon: "🌐", title: "7 Interface Languages", desc: "EN, PT-BR, ES, FR, DE, JA, ZH-CN fully translated" },
-                { icon: "📖", title: "First-Run Guide", desc: "Welcome modal with helpful tips and help button" },
-                { icon: "✨", title: "Modern Design", desc: "Beautiful gradient UI with glassmorphic effects" },
-                { icon: "📱", title: "Responsive Layout", desc: "Works seamlessly on all screen sizes" }
+                { icon: "🗂️", title: "Collapsible Settings", desc: "Organized voice selector, playback controls, and advanced settings sections" },
+                { icon: "🌐", title: "7 Interface Languages", desc: "English, Portuguese (BR), Spanish, French, German, Japanese, Chinese (CN)" },
+                { icon: "📖", title: "First-Run Welcome Guide", desc: "Interactive modal with helpful tips and contextual help button (?)" },
+                { icon: "✨", title: "Modern Glassmorphic Design", desc: "Beautiful gradient UI with frosted glass effects and smooth animations" },
+                { icon: "♿", title: "Accessibility First", desc: "WCAG 2.1 AA compliant with ARIA labels and full keyboard navigation" },
+                { icon: "⌨️", title: "Keyboard Shortcuts", desc: "Ctrl+Shift+R to read, Space to pause/resume, Escape to stop" }
               ].map((ux, i) => (
                 <motion.div 
                   key={i}
@@ -453,23 +493,27 @@ export default function Home() {
             <ul className="space-y-4 text-gray-700 dark:text-gray-300">
               <li className="flex items-start gap-3 text-base leading-relaxed">
                 <span className="text-xl flex-shrink-0">🌐</span>
-                <span>Extension auto-detects page language from metadata</span>
+                <span>Auto-detects language from page metadata and text patterns across 30+ languages</span>
               </li>
               <li className="flex items-start gap-3 text-base leading-relaxed">
                 <span className="text-xl flex-shrink-0">⚡</span>
-                <span>Look for lightning bolt for premium/neural voices</span>
+                <span>Look for lightning bolt (⚡) to identify Neural and Premium quality voices</span>
+              </li>
+              <li className="flex items-start gap-3 text-base leading-relaxed">
+                <span className="text-xl flex-shrink-0">⌨️</span>
+                <span>Use Ctrl+Shift+R to read selected text, Space to pause/resume, Escape to stop</span>
               </li>
               <li className="flex items-start gap-3 text-base leading-relaxed">
                 <span className="text-xl flex-shrink-0">🎯</span>
-                <span>Save your favorite voice as default</span>
+                <span>Enable word highlighting and auto-scroll for enhanced reading experience</span>
+              </li>
+              <li className="flex items-start gap-3 text-base leading-relaxed">
+                <span className="text-xl flex-shrink-0">📰</span>
+                <span>Use 'Read Full Article' button for AI-powered article content detection</span>
               </li>
               <li className="flex items-start gap-3 text-base leading-relaxed">
                 <span className="text-xl flex-shrink-0">❓</span>
-                <span>Click the help button (?) to reopen the welcome guide</span>
-              </li>
-              <li className="flex items-start gap-3 text-base leading-relaxed">
-                <span className="text-xl flex-shrink-0">🌍</span>
-                <span>Change interface language in settings</span>
+                <span>Click the help button (?) anytime to access the welcome guide and tips</span>
               </li>
             </ul>
           </motion.div>
