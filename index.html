@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,14 +7,13 @@
     <title>Read It For Me - AI-Powered Reading Assistant</title>
     <script>
       // Initialize dark mode before page renders to prevent flash
-      (function() {
-        const savedMode = localStorage.getItem('darkMode');
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        // Default to dark mode (true)
-        const isDark = savedMode !== null ? JSON.parse(savedMode) : (prefersDark || true);
-        
+      (function () {
+        const savedMode = localStorage.getItem("darkMode");
+        // Default to dark mode unless user has explicitly changed it
+        const isDark = savedMode !== null ? JSON.parse(savedMode) : true;
+
         if (isDark) {
-          document.documentElement.classList.add('dark');
+          document.documentElement.classList.add("dark");
         }
       })();
     </script>

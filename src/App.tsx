@@ -11,10 +11,6 @@ function App() {
     if (saved !== null) {
       return JSON.parse(saved)
     }
-    // Fallback to system preference
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      return true
-    }
     // Default to dark mode
     return true
   })
