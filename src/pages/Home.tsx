@@ -41,11 +41,11 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen overflow-hidden">
+    <main className="min-h-screen overflow-hidden">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-600 via-purple-600 to-pink-500 dark:from-blue-800 dark:via-purple-800 dark:to-pink-700 text-white py-24 md:py-32 px-4 transition-colors duration-300 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-blue-600 via-purple-600 to-pink-500 dark:from-blue-800 dark:via-purple-800 dark:to-pink-700 text-white py-24 md:py-32 px-4 transition-colors duration-300 overflow-hidden" aria-label="Hero section">
         {/* Decorative background elements */}
-        <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
           <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-400/20 rounded-full blur-3xl"></div>
         </div>
@@ -58,8 +58,10 @@ export default function Home() {
           >
             <img 
               src={logo} 
-              alt="Read It For Me Logo" 
+              alt="Read It For Me - AI Text-to-Speech Extension Logo" 
               className="h-28 w-28"
+              width="112"
+              height="112"
             />
           </motion.div>
           <motion.h1 
@@ -137,7 +139,7 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-24 md:py-32 px-4 bg-gradient-to-b from-white to-gray-50 dark:from-slate-900 dark:to-slate-800 transition-colors duration-300">
+      <section className="py-24 md:py-32 px-4 bg-gradient-to-b from-white to-gray-50 dark:from-slate-900 dark:to-slate-800 transition-colors duration-300" aria-label="Features">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial="hidden"
@@ -356,8 +358,9 @@ export default function Home() {
               <div className="overflow-hidden rounded-xl mb-4 border border-gray-200 dark:border-slate-600">
                 <img 
                   src={buttonImg} 
-                  alt="Read It For Me floating button" 
+                  alt="Read It For Me floating button interface showing one-click text-to-speech activation" 
                   className="w-full h-auto transform group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
                 />
               </div>
               <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-2">Floating Button</h4>
@@ -372,8 +375,9 @@ export default function Home() {
               <div className="overflow-hidden rounded-xl mb-4 border border-gray-200 dark:border-slate-600">
                 <img 
                   src={expandedPlayerImg} 
-                  alt="Expanded player interface" 
+                  alt="Expanded player interface with full playback controls, voice settings, and speed adjustment" 
                   className="w-full h-auto transform group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
                 />
               </div>
               <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-2">Expanded Player</h4>
@@ -388,8 +392,9 @@ export default function Home() {
               <div className="overflow-hidden rounded-xl mb-4 border border-gray-200 dark:border-slate-600">
                 <img 
                   src={miniImg} 
-                  alt="Mini player mode" 
+                  alt="Compact mini player mode for multitasking with draggable controls" 
                   className="w-full h-auto transform group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
                 />
               </div>
               <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-2">Mini Mode</h4>
@@ -404,8 +409,9 @@ export default function Home() {
               <div className="overflow-hidden rounded-xl mb-4 border border-gray-200 dark:border-slate-600">
                 <img 
                   src={playerDefaultImg} 
-                  alt="Default player view" 
+                  alt="Default player view with clean, intuitive text-to-speech controls" 
                   className="w-full h-auto transform group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
                 />
               </div>
               <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-2">Default Player</h4>
@@ -420,8 +426,9 @@ export default function Home() {
               <div className="overflow-hidden rounded-xl mb-4 border border-gray-200 dark:border-slate-600">
                 <img 
                   src={configImg} 
-                  alt="Configuration settings" 
+                  alt="Configuration settings panel for customizing voice, speed, pitch, and language preferences" 
                   className="w-full h-auto transform group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
                 />
               </div>
               <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-2">Settings Panel</h4>
@@ -788,6 +795,6 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-    </div>
+    </main>
   )
 }

@@ -17,8 +17,8 @@ const stagger = {
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-slate-800 transition-colors duration-300">
-      <section className="py-20 px-4">
+    <main className="min-h-screen bg-gray-50 dark:bg-slate-800 transition-colors duration-300">
+      <section className="py-20 px-4" aria-label="About Read It For Me">
         <div className="max-w-4xl mx-auto">
           <motion.h1 
             className="text-5xl font-bold mb-8 text-gray-800 dark:text-white"
@@ -61,8 +61,9 @@ export default function About() {
                 >
                   <img 
                     src={expandedPlayerImg} 
-                    alt="Read It For Me expanded player" 
+                    alt="Read It For Me expanded player interface with full playback controls and settings" 
                     className="w-full h-auto rounded-lg mb-3"
+                    loading="lazy"
                   />
                   <p className="text-sm text-gray-600 dark:text-gray-300 text-center">Expanded player with full controls</p>
                 </motion.div>
@@ -72,8 +73,9 @@ export default function About() {
                 >
                   <img 
                     src={configImg} 
-                    alt="Settings configuration" 
+                    alt="Settings configuration panel for customizing voice, language, and playback preferences" 
                     className="w-full h-auto rounded-lg mb-3"
+                    loading="lazy"
                   />
                   <p className="text-sm text-gray-600 dark:text-gray-300 text-center">Customizable settings panel</p>
                 </motion.div>
@@ -337,6 +339,6 @@ export default function About() {
           </div>
         </div>
       </section>
-    </div>
+    </main>
   );
 }
