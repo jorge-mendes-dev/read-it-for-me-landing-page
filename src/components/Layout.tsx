@@ -8,8 +8,8 @@ interface LayoutProps {
 
 export default function Layout({ darkMode, toggleDarkMode }: LayoutProps) {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-slate-800 transition-colors duration-300">
-      <nav className="bg-white dark:bg-slate-800 shadow-lg transition-colors duration-300">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-800 transition-colors duration-500">
+      <nav className="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-soft dark:shadow-medium border-b border-slate-200/50 dark:border-slate-700/50 transition-all duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
             <div className="flex">
@@ -32,10 +32,7 @@ export default function Layout({ darkMode, toggleDarkMode }: LayoutProps) {
                 About
               </Link>
               <button
-                onClick={() => {
-                  console.log('Button clicked, current mode:', darkMode)
-                  toggleDarkMode()
-                }}
+                onClick={toggleDarkMode}
                 className="p-2 rounded-lg bg-gray-100 dark:bg-slate-700 hover:bg-gray-200 dark:hover:bg-slate-600 transition-colors border border-gray-300 dark:border-slate-500"
                 aria-label="Toggle dark mode"
                 type="button"
@@ -59,7 +56,7 @@ export default function Layout({ darkMode, toggleDarkMode }: LayoutProps) {
         <Outlet />
       </main>
       
-      <footer className="bg-gray-800 dark:bg-slate-900 text-white py-8 mt-20 transition-colors duration-300">
+      <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 text-white py-12 mt-24 border-t border-slate-700/50 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <p className="text-gray-300 mb-2">© 2026 Read It For Me. All rights reserved.</p>

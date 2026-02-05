@@ -30,11 +30,10 @@ function App() {
   }, [darkMode])
 
   const toggleDarkMode = () => {
-    setDarkMode(prev => {
+    setDarkMode((prev: boolean) => {
       const newMode = !prev
-      console.log('Toggling dark mode from', prev, 'to', newMode)
       
-      // Immediately update DOM
+      // Immediately update DOM to avoid flicker
       const root = document.documentElement
       if (newMode) {
         root.classList.add('dark')

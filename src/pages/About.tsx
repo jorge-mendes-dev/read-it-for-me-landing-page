@@ -5,11 +5,11 @@ import { fadeInUp, stagger } from '../constants/animations'
 
 export default function About() {
   return (
-    <main className="min-h-screen bg-gray-50 dark:bg-slate-800 transition-colors duration-300">
-      <section className="py-20 px-4" aria-label="About Read It For Me">
+    <main className="min-h-screen bg-gradient-to-b from-white via-slate-50/50 to-white dark:from-slate-900 dark:via-slate-800/50 dark:to-slate-900 transition-colors duration-500">
+      <section className="py-32 md:py-40 px-4" aria-label="About Read It For Me">
         <div className="max-w-4xl mx-auto">
           <motion.h1 
-            className="text-5xl font-bold mb-8 text-gray-800 dark:text-white"
+            className="text-5xl md:text-6xl font-bold mb-12 text-slate-900 dark:text-white"
             initial="hidden"
             animate="visible"
             variants={fadeInUp}
@@ -25,8 +25,8 @@ export default function About() {
               variants={fadeInUp}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              <h2 className="text-3xl font-bold mb-4 text-gray-800 dark:text-white">Our Mission</h2>
-              <p className="text-gray-600 dark:text-gray-300 mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-900 dark:text-white">Our Mission</h2>
+              <p className="text-lg text-slate-600 dark:text-slate-300 mb-10 leading-relaxed">
               We believe that everyone should have access to content in the format that works best for them.
               Read It For Me makes the web more accessible by providing natural, high-quality text-to-speech
               conversion with AI-powered voice selection and smart language detection. Perfect for accessibility, 
@@ -41,31 +41,31 @@ export default function About() {
               variants={fadeInUp}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-3xl font-bold mb-4 text-gray-800 dark:text-white">User Interface</h2>
-              <div className="grid md:grid-cols-2 gap-6 mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold mb-8 text-slate-900 dark:text-white">User Interface</h2>
+              <div className="grid md:grid-cols-2 gap-8 mb-12">
                 <motion.div 
-                  className="bg-white dark:bg-slate-700 p-4 rounded-lg shadow-md"
+                  className="bg-white dark:bg-slate-800/50 p-6 rounded-enterprise shadow-soft hover:shadow-enterprise transition-all duration-400 border border-slate-200/80 dark:border-slate-700/50 backdrop-blur-sm"
                   whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
                 >
                   <img 
                     src={expandedPlayerImg} 
                     alt="Read It For Me expanded player interface with full playback controls and settings" 
-                    className="w-full h-auto rounded-lg mb-3"
+                    className="w-full h-auto rounded-section mb-4 border border-slate-200 dark:border-slate-600"
                     loading="lazy"
                   />
-                  <p className="text-sm text-gray-600 dark:text-gray-300 text-center">Expanded player with full controls</p>
+                  <p className="text-base text-slate-600 dark:text-slate-300 text-center font-medium">Expanded player with full controls</p>
                 </motion.div>
                 <motion.div 
-                  className="bg-white dark:bg-slate-700 p-4 rounded-lg shadow-md"
+                  className="bg-white dark:bg-slate-800/50 p-6 rounded-enterprise shadow-soft hover:shadow-enterprise transition-all duration-400 border border-slate-200/80 dark:border-slate-700/50 backdrop-blur-sm"
                   whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
                 >
                   <img 
                     src={configImg} 
                     alt="Settings configuration panel for customizing voice, language, and playback preferences" 
-                    className="w-full h-auto rounded-lg mb-3"
+                    className="w-full h-auto rounded-section mb-4 border border-slate-200 dark:border-slate-600"
                     loading="lazy"
                   />
-                  <p className="text-sm text-gray-600 dark:text-gray-300 text-center">Customizable settings panel</p>
+                  <p className="text-base text-slate-600 dark:text-slate-300 text-center font-medium">Customizable settings panel</p>
                 </motion.div>
               </div>
             </motion.div>
@@ -77,9 +77,9 @@ export default function About() {
               variants={fadeInUp}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-3xl font-bold mb-4 text-gray-800 dark:text-white">🛠️ Tech Stack</h2>
-              <div className="bg-white dark:bg-slate-700 p-6 rounded-lg shadow-md mb-8 transition-colors duration-300">
-              <ul className="space-y-3 text-gray-700 dark:text-gray-300">
+              <h2 className="text-3xl md:text-4xl font-bold mb-8 text-slate-900 dark:text-white">🛠️ Tech Stack</h2>
+              <div className="bg-gradient-to-br from-white via-slate-50/50 to-white dark:from-slate-800/80 dark:via-slate-800/50 dark:to-slate-800/80 p-10 rounded-enterprise shadow-enterprise mb-12 transition-colors duration-500 border border-slate-200/80 dark:border-slate-700/50 backdrop-blur-sm">
+              <ul className="space-y-5 text-slate-700 dark:text-slate-300 text-base">
                 <li className="flex items-start">
                   <span className="font-semibold min-w-[140px] dark:text-white">Extension Type:</span>
                   <span>Browser Extension (Manifest V3)</span>
@@ -127,10 +127,10 @@ export default function About() {
               variants={fadeInUp}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-3xl font-bold mb-4 text-gray-800 dark:text-white">🗺️ Roadmap</h2>
-              <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-3 text-green-600 dark:text-green-400">✅ Implemented (v1.0.3)</h3>
-              <ul className="grid md:grid-cols-2 gap-2 text-gray-600 dark:text-gray-300 mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold mb-8 text-slate-900 dark:text-white">🗺️ Roadmap</h2>
+              <div className="mb-12">
+              <h3 className="text-2xl font-semibold mb-6 text-green-600 dark:text-green-400">✅ Implemented (v1.0.3)</h3>
+              <ul className="grid md:grid-cols-2 gap-3 text-slate-600 dark:text-slate-300 mb-10 text-base">
                 <li>✅ Smart auto-language detection (30+ languages)</li>
                 <li>✅ AI-powered voice selection with ⚡ indicators</li>
                 <li>✅ Live word highlighting during playback</li>
@@ -151,8 +151,8 @@ export default function About() {
                 <li>✅ WCAG 2.1 AA accessibility</li>
               </ul>
               
-              <h3 className="text-xl font-semibold mb-3 text-purple-600 dark:text-purple-400">🚀 Planned Features</h3>
-              <ul className="grid md:grid-cols-2 gap-2 text-gray-600 dark:text-gray-300">
+              <h3 className="text-2xl font-semibold mb-6 text-primary-600 dark:text-primary-400">🚀 Planned Features</h3>
+              <ul className="grid md:grid-cols-2 gap-3 text-slate-600 dark:text-slate-300 text-base">
                 <li>� Save/load voice presets</li>
                 <li>📜 Reading history</li>
                 <li>🎵 Export audio to file (MP3/WAV)</li>
@@ -172,14 +172,14 @@ export default function About() {
               variants={fadeInUp}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-3xl font-bold mb-4 text-gray-800 dark:text-white">🔒 Privacy First</h2>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-900 dark:text-white">🔒 Privacy First</h2>
+              <p className="text-lg text-slate-600 dark:text-slate-300 mb-8 leading-relaxed">
               Your privacy matters. Read It For Me processes all text locally on your device using the
               browser's built-in speech synthesis. We don't collect, store, or transmit any of your data.
             </p>
-            <div className="bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-950 dark:to-blue-950 p-6 rounded-lg mb-8">
-              <h3 className="font-semibold mb-3 text-gray-800 dark:text-white">Privacy Guarantees:</h3>
-              <ul className="space-y-2 text-gray-700 dark:text-gray-300">
+            <div className="bg-gradient-to-br from-green-50 via-emerald-50 to-blue-50 dark:from-green-900/20 dark:via-emerald-900/10 dark:to-blue-900/20 p-10 rounded-enterprise mb-12 border border-green-200/60 dark:border-green-500/30 shadow-enterprise backdrop-blur-sm">
+              <h3 className="text-xl font-semibold mb-6 text-slate-900 dark:text-white">Privacy Guarantees:</h3>
+              <ul className="space-y-4 text-slate-700 dark:text-slate-300 text-base">
                 <li>🔒 <strong>Zero Tracking</strong> - No analytics, no telemetry</li>
                 <li>🚫 <strong>No Data Collection</strong> - Nothing leaves your device</li>
                 <li>🔐 <strong>Minimal Permissions</strong> - Only activeTab and storage</li>
@@ -197,14 +197,14 @@ export default function About() {
               variants={fadeInUp}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-3xl font-bold mb-4 text-gray-800 dark:text-white">🤝 Contributing</h2>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-900 dark:text-white">🤝 Contributing</h2>
+              <p className="text-lg text-slate-600 dark:text-slate-300 mb-8 leading-relaxed">
               Read It For Me is open source and available on GitHub under the MIT License. 
               We welcome contributions from the community!
             </p>
-            <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950 dark:to-purple-950 p-6 rounded-lg mb-6 transition-colors duration-300">
-              <h3 className="font-semibold mb-3 dark:text-white">How to Contribute:</h3>
-              <ol className="list-decimal pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+            <div className="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-blue-900/20 dark:via-indigo-900/10 dark:to-purple-900/20 p-10 rounded-enterprise mb-10 border border-blue-200/60 dark:border-blue-500/30 shadow-enterprise backdrop-blur-sm transition-colors duration-500">
+              <h3 className="text-xl font-semibold mb-6 text-slate-900 dark:text-white">How to Contribute:</h3>
+              <ol className="list-decimal pl-6 space-y-4 text-slate-700 dark:text-slate-300 text-base">
                 <li>Fork the repository</li>
                 <li>Create your feature branch (<code className="bg-white dark:bg-slate-900 px-2 py-1 rounded">git checkout -b feature/AmazingFeature</code>)</li>
                 <li>Commit your changes (<code className="bg-white dark:bg-slate-900 px-2 py-1 rounded">git commit -m 'Add some AmazingFeature'</code>)</li>
@@ -221,8 +221,8 @@ export default function About() {
               variants={fadeInUp}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-3xl font-bold mb-4 text-gray-800 dark:text-white">🙏 Acknowledgments</h2>
-              <ul className="list-disc pl-6 text-gray-600 dark:text-gray-300 mb-8 space-y-2">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-900 dark:text-white">🙏 Acknowledgments</h2>
+              <ul className="list-disc pl-6 text-lg text-slate-600 dark:text-slate-300 mb-12 space-y-3 leading-relaxed">
               <li>Built with the Web Speech API</li>
               <li>Icons designed with Heroicons</li>
               <li>UI design inspired by modern glassmorphism principles</li>
@@ -238,9 +238,9 @@ export default function About() {
               variants={fadeInUp}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-3xl font-bold mb-4 text-gray-800 dark:text-white">👨‍💻 Developer</h2>
-              <div className="bg-white dark:bg-slate-700 p-6 rounded-lg shadow-md mb-8 transition-colors duration-300">
-                <p className="text-gray-600 dark:text-gray-300 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold mb-8 text-slate-900 dark:text-white">👨‍💻 Developer</h2>
+              <div className="bg-gradient-to-br from-white via-slate-50/50 to-white dark:from-slate-800/80 dark:via-slate-800/50 dark:to-slate-800/80 p-10 rounded-enterprise shadow-enterprise mb-12 transition-colors duration-500 border border-slate-200/80 dark:border-slate-700/50 backdrop-blur-sm">
+                <p className="text-lg text-slate-600 dark:text-slate-300 mb-8 leading-relaxed">
                 Read It For Me is developed and maintained by Jorge Mendes, a passionate developer
                 focused on creating accessible and useful tools for the web.
               </p>

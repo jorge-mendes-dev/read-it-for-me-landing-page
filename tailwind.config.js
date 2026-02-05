@@ -93,11 +93,28 @@ export default {
         'body-sm': ['0.875rem', { lineHeight: '1.25rem', fontWeight: '400' }],
         'caption': ['0.75rem', { lineHeight: '1rem', fontWeight: '400' }],
       },
+      // Enterprise-grade shadows
+      boxShadow: {
+        'soft': '0 2px 8px 0 rgba(0, 0, 0, 0.05)',
+        'medium': '0 4px 16px 0 rgba(0, 0, 0, 0.08)',
+        'hard': '0 8px 32px 0 rgba(0, 0, 0, 0.12)',
+        'enterprise': '0 20px 40px -12px rgba(0, 0, 0, 0.15)',
+        'glow': '0 0 20px rgba(99, 102, 241, 0.3)',
+        'glow-lg': '0 0 40px rgba(99, 102, 241, 0.4)',
+      },
+      // Professional border radius
+      borderRadius: {
+        'card': '0.75rem',
+        'section': '1rem',
+        'enterprise': '1.5rem',
+      },
       // Smooth animations
       transitionDuration: {
         '150': '150ms',
         '250': '250ms',
         '350': '350ms',
+        '400': '400ms',
+        '500': '500ms',
       },
       animation: {
         'fade-in': 'fadeIn 0.3s ease-in-out',
@@ -105,6 +122,7 @@ export default {
         'slide-down': 'slideDown 0.3s ease-out',
         'scale-in': 'scaleIn 0.2s ease-out',
         'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'shimmer': 'shimmer 2s linear infinite',
       },
       keyframes: {
         fadeIn: {
@@ -123,6 +141,15 @@ export default {
           '0%': { transform: 'scale(0.95)', opacity: '0' },
           '100%': { transform: 'scale(1)', opacity: '1' },
         },
+        shimmer: {
+          '0%': { backgroundPosition: '-200% center' },
+          '100%': { backgroundPosition: '200% center' },
+        },
+      },
+      // Enterprise backdrop filters
+      backdropBlur: {
+        'xs': '2px',
+        'enterprise': '24px',
       },
     },
   },

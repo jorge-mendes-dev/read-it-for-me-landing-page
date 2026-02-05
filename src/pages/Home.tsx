@@ -29,15 +29,16 @@ export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-600 via-purple-600 to-pink-500 dark:from-blue-800 dark:via-purple-800 dark:to-pink-700 text-white py-24 md:py-32 px-4 transition-colors duration-300 overflow-hidden" aria-label="Hero section">
+      <section className="relative bg-gradient-to-br from-slate-900 via-primary-900 to-secondary-900 dark:from-slate-950 dark:via-primary-950 dark:to-secondary-950 text-white py-32 md:py-40 px-4 transition-colors duration-500 overflow-hidden" aria-label="Hero section">
         {/* Decorative background elements */}
         <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
-          <div className="absolute top-0 left-1/4 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-400/20 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/4 left-1/3 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl animate-pulse-slow"></div>
+          <div className="absolute bottom-1/4 right-1/3 w-96 h-96 bg-secondary-500/10 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIwLjUiIG9wYWNpdHk9IjAuMDMiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-20"></div>
         </div>
         <div className="max-w-6xl mx-auto text-center relative z-10">
           <motion.div
-            className="inline-block p-2 bg-white/10 backdrop-blur-sm rounded-3xl mb-8"
+            className="inline-block p-3 bg-white/10 backdrop-blur-md rounded-3xl mb-10 shadow-enterprise border border-white/20"
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ type: "spring", stiffness: 200, damping: 20 }}
@@ -103,7 +104,7 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-24 md:py-32 px-4 bg-gradient-to-b from-white to-gray-50 dark:from-slate-900 dark:to-slate-800 transition-colors duration-300" aria-label="Features">
+      <section className="py-32 md:py-40 px-4 bg-gradient-to-b from-white via-slate-50/50 to-white dark:from-slate-900 dark:via-slate-800/50 dark:to-slate-900 transition-colors duration-500" aria-label="Features">
         <div className="max-w-7xl mx-auto">
           <SectionHeader
             badge="✨ FEATURES"
@@ -213,7 +214,7 @@ export default function Home() {
       </section>
 
       {/* Screenshots Gallery */}
-      <section className="py-24 md:py-32 px-4 bg-gradient-to-b from-gray-50 to-white dark:from-slate-800 dark:to-slate-900 transition-colors duration-300">
+      <section className="py-32 md:py-40 px-4 bg-gradient-to-b from-slate-50 via-white to-slate-50 dark:from-slate-800 dark:via-slate-900/50 dark:to-slate-800 transition-colors duration-500">
         <div className="max-w-7xl mx-auto">
           <SectionHeader
             badge="📸 SCREENSHOTS"
@@ -229,11 +230,11 @@ export default function Home() {
             variants={stagger}
           >
             <motion.div 
-              className="group bg-white dark:bg-slate-800 p-6 rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm hover:shadow-2xl transition-all duration-300"
+              className="group bg-white dark:bg-slate-800/50 p-8 rounded-enterprise border border-slate-200/80 dark:border-slate-700/50 shadow-soft hover:shadow-enterprise transition-all duration-400 backdrop-blur-sm"
               variants={scaleIn}
               whileHover={{ y: -8, transition: { duration: 0.3 } }}
             >
-              <div className="overflow-hidden rounded-xl mb-4 border border-gray-200 dark:border-slate-600">
+              <div className="overflow-hidden rounded-section mb-5 border border-slate-200 dark:border-slate-600 shadow-soft">
                 <img 
                   src={buttonImg} 
                   alt="Read It For Me floating button interface showing one-click text-to-speech activation" 
@@ -241,16 +242,16 @@ export default function Home() {
                   loading="lazy"
                 />
               </div>
-              <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-2">Floating Button</h4>
-              <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">One-click access to start reading</p>
+              <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-2">Floating Button</h4>
+              <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">One-click access to start reading</p>
             </motion.div>
 
             <motion.div 
-              className="group bg-white dark:bg-slate-800 p-6 rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm hover:shadow-2xl transition-all duration-300"
+              className="group bg-white dark:bg-slate-800/50 p-8 rounded-enterprise border border-slate-200/80 dark:border-slate-700/50 shadow-soft hover:shadow-enterprise transition-all duration-400 backdrop-blur-sm"
               variants={scaleIn}
               whileHover={{ y: -8, transition: { duration: 0.3 } }}
             >
-              <div className="overflow-hidden rounded-xl mb-4 border border-gray-200 dark:border-slate-600">
+              <div className="overflow-hidden rounded-section mb-5 border border-slate-200 dark:border-slate-600 shadow-soft">
                 <img 
                   src={expandedPlayerImg} 
                   alt="Expanded player interface with full playback controls, voice settings, and speed adjustment" 
@@ -258,16 +259,16 @@ export default function Home() {
                   loading="lazy"
                 />
               </div>
-              <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-2">Expanded Player</h4>
-              <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">Full controls and settings</p>
+              <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-2">Expanded Player</h4>
+              <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">Full controls and settings</p>
             </motion.div>
 
             <motion.div 
-              className="group bg-white dark:bg-slate-800 p-6 rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm hover:shadow-2xl transition-all duration-300"
+              className="group bg-white dark:bg-slate-800/50 p-8 rounded-enterprise border border-slate-200/80 dark:border-slate-700/50 shadow-soft hover:shadow-enterprise transition-all duration-400 backdrop-blur-sm"
               variants={scaleIn}
               whileHover={{ y: -8, transition: { duration: 0.3 } }}
             >
-              <div className="overflow-hidden rounded-xl mb-4 border border-gray-200 dark:border-slate-600">
+              <div className="overflow-hidden rounded-section mb-5 border border-slate-200 dark:border-slate-600 shadow-soft">
                 <img 
                   src={miniImg} 
                   alt="Compact mini player mode for multitasking with draggable controls" 
@@ -275,16 +276,16 @@ export default function Home() {
                   loading="lazy"
                 />
               </div>
-              <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-2">Mini Mode</h4>
-              <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">Compact player for multitasking</p>
+              <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-2">Mini Mode</h4>
+              <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">Compact player for multitasking</p>
             </motion.div>
 
             <motion.div 
-              className="group bg-white dark:bg-slate-800 p-6 rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm hover:shadow-2xl transition-all duration-300"
+              className="group bg-white dark:bg-slate-800/50 p-8 rounded-enterprise border border-slate-200/80 dark:border-slate-700/50 shadow-soft hover:shadow-enterprise transition-all duration-400 backdrop-blur-sm"
               variants={scaleIn}
               whileHover={{ y: -8, transition: { duration: 0.3 } }}
             >
-              <div className="overflow-hidden rounded-xl mb-4 border border-gray-200 dark:border-slate-600">
+              <div className="overflow-hidden rounded-section mb-5 border border-slate-200 dark:border-slate-600 shadow-soft">
                 <img 
                   src={playerDefaultImg} 
                   alt="Default player view with clean, intuitive text-to-speech controls" 
@@ -292,16 +293,16 @@ export default function Home() {
                   loading="lazy"
                 />
               </div>
-              <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-2">Default Player</h4>
-              <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">Clean and intuitive design</p>
+              <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-2">Default Player</h4>
+              <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">Clean and intuitive design</p>
             </motion.div>
 
             <motion.div 
-              className="group bg-white dark:bg-slate-800 p-6 rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm hover:shadow-2xl transition-all duration-300"
+              className="group bg-white dark:bg-slate-800/50 p-8 rounded-enterprise border border-slate-200/80 dark:border-slate-700/50 shadow-soft hover:shadow-enterprise transition-all duration-400 backdrop-blur-sm"
               variants={scaleIn}
               whileHover={{ y: -8, transition: { duration: 0.3 } }}
             >
-              <div className="overflow-hidden rounded-xl mb-4 border border-gray-200 dark:border-slate-600">
+              <div className="overflow-hidden rounded-section mb-5 border border-slate-200 dark:border-slate-600 shadow-soft">
                 <img 
                   src={configImg} 
                   alt="Configuration settings panel for customizing voice, speed, pitch, and language preferences" 
@@ -309,18 +310,18 @@ export default function Home() {
                   loading="lazy"
                 />
               </div>
-              <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-2">Settings Panel</h4>
-              <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">Customize your experience</p>
+              <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-2">Settings Panel</h4>
+              <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">Customize your experience</p>
             </motion.div>
           </motion.div>
         </div>
       </section>
 
       {/* How to Use */}
-      <section className="py-20 px-4 bg-gray-50 dark:bg-slate-800 transition-colors duration-300">
+      <section className="py-32 md:py-40 px-4 bg-gradient-to-b from-white via-slate-50/30 to-white dark:from-slate-900 dark:via-slate-800/30 dark:to-slate-900 transition-colors duration-500">
         <div className="max-w-4xl mx-auto">
           <motion.h2 
-            className="text-4xl font-bold text-center mb-16 text-gray-800 dark:text-white"
+            className="text-4xl md:text-5xl font-bold text-center mb-20 text-slate-900 dark:text-white"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -339,13 +340,13 @@ export default function Home() {
             {HOW_TO_USE_STEPS.map((item) => (
               <motion.div 
                 key={item.step}
-                className="group bg-white dark:bg-slate-800 p-8 rounded-2xl border border-gray-200 dark:border-slate-700 hover:border-purple-300 dark:hover:border-purple-600 shadow-sm hover:shadow-xl transition-all duration-300"
+                className="group relative bg-white dark:bg-slate-800/50 p-10 rounded-enterprise border border-slate-200/80 dark:border-slate-700/50 hover:border-primary-300 dark:hover:border-primary-500/50 shadow-soft hover:shadow-enterprise transition-all duration-400 backdrop-blur-sm"
                 variants={fadeInUp}
-                whileHover={{ x: 8, transition: { duration: 0.3 } }}
+                whileHover={{ x: 12, transition: { duration: 0.3 } }}
               >
-                <div className="flex items-start gap-6">
+                <div className="flex items-start gap-8">
                   <motion.div 
-                    className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-500 rounded-2xl flex items-center justify-center text-white font-black text-2xl shadow-lg"
+                    className="flex-shrink-0 w-20 h-20 bg-gradient-to-br from-primary-600 via-primary-500 to-secondary-500 rounded-enterprise flex items-center justify-center text-white font-black text-3xl shadow-enterprise"
                     whileHover={{ scale: 1.15, rotate: 5, transition: { duration: 0.3 } }}
                   >
                     {item.step}
@@ -401,7 +402,7 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-24 md:py-32 px-4 bg-gradient-to-b from-gray-50 to-white dark:from-slate-800 dark:to-slate-900 transition-colors duration-300">
+      <section className="py-32 md:py-40 px-4 bg-gradient-to-b from-slate-50 via-white to-slate-50 dark:from-slate-800 dark:via-slate-900/50 dark:to-slate-800 transition-colors duration-500">
         <div className="max-w-4xl mx-auto">
           <SectionHeader
             badge="❓ FAQ"
@@ -419,14 +420,14 @@ export default function Home() {
             {FAQS.map((faq, i) => (
               <motion.div 
                 key={i}
-                className="bg-gray-50 dark:bg-slate-800 rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
+                className="bg-white dark:bg-slate-800/50 rounded-enterprise overflow-hidden hover:shadow-enterprise shadow-soft transition-all duration-400 border border-slate-200/80 dark:border-slate-700/50 backdrop-blur-sm"
                 variants={fadeInUp}
               >
                 <button
                   onClick={() => toggleFaq(i)}
-                  className="w-full text-left p-6 flex items-start justify-between hover:bg-gray-100 dark:hover:bg-slate-700 transition-colors"
+                  className="w-full text-left p-8 flex items-start justify-between hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors duration-300"
                 >
-                  <h3 className="text-lg font-semibold text-gray-800 dark:text-white flex items-start flex-1">
+                  <h3 className="text-lg font-semibold text-slate-900 dark:text-white flex items-start flex-1 leading-relaxed">
                     <span className="text-purple-600 dark:text-purple-400 mr-2">Q:</span>
                     {faq.question}
                   </h3>
@@ -450,8 +451,8 @@ export default function Home() {
                   transition={{ duration: 0.3, ease: 'easeInOut' }}
                   className="overflow-hidden"
                 >
-                  <p className="text-gray-600 dark:text-gray-300 px-6 pb-6 pl-12">
-                    <span className="text-blue-600 dark:text-blue-400 mr-2 font-semibold">A:</span>
+                  <p className="text-slate-600 dark:text-slate-300 px-8 pb-8 pl-16 leading-relaxed text-base">
+                    <span className="text-primary-600 dark:text-primary-400 mr-2 font-semibold">A:</span>
                     {faq.answer}
                   </p>
                 </motion.div>
@@ -460,27 +461,27 @@ export default function Home() {
           </motion.div>
 
           <motion.div 
-            className="mt-16 text-center bg-white dark:bg-slate-800 p-10 rounded-3xl border border-gray-200 dark:border-slate-700 shadow-sm"
+            className="mt-20 text-center bg-gradient-to-br from-white via-slate-50/50 to-white dark:from-slate-800/80 dark:via-slate-800/50 dark:to-slate-800/80 p-12 rounded-enterprise border border-slate-200/80 dark:border-slate-700/50 shadow-enterprise backdrop-blur-sm"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={scaleIn}
             transition={{ delay: 0.2 }}
           >
-            <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-500 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6 shadow-lg">
+            <div className="w-20 h-20 bg-gradient-to-br from-primary-600 via-primary-500 to-secondary-500 rounded-enterprise flex items-center justify-center text-4xl mx-auto mb-8 shadow-enterprise">
               💬
             </div>
-            <p className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+            <p className="text-2xl font-bold text-slate-900 dark:text-white mb-3">
               Have more questions?
             </p>
-            <p className="text-gray-600 dark:text-gray-300 mb-6">
+            <p className="text-slate-600 dark:text-slate-300 mb-8 text-lg">
               We're here to help! Reach out to our community on GitHub.
             </p>
             <a
               href="https://github.com/jorge-mendes-dev/read-it-for-me/issues"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-bold transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="inline-flex items-center gap-3 bg-gradient-to-r from-primary-600 to-secondary-600 hover:from-primary-700 hover:to-secondary-700 text-white px-10 py-5 rounded-enterprise font-bold transition-all duration-400 shadow-medium hover:shadow-enterprise hover:scale-105"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                 <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z\" clipRule="evenodd\" />
@@ -492,11 +493,12 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative bg-gradient-to-br from-purple-600 via-blue-600 to-pink-500 dark:from-purple-800 dark:via-blue-800 dark:to-pink-700 text-white py-24 md:py-32 px-4 transition-colors duration-300 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-slate-900 via-primary-900 to-secondary-900 dark:from-slate-950 dark:via-primary-950 dark:to-secondary-950 text-white py-32 md:py-40 px-4 transition-colors duration-500 overflow-hidden">
         {/* Decorative background elements */}
-        <div className="absolute inset-0 overflow-hidden opacity-20">
-          <div className="absolute -top-24 -left-24 w-96 h-96 bg-white rounded-full blur-3xl"></div>
-          <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-purple-300 rounded-full blur-3xl"></div>
+        <div className="absolute inset-0 overflow-hidden opacity-25">
+          <div className="absolute -top-24 -left-24 w-[600px] h-[600px] bg-white/10 rounded-full blur-3xl animate-pulse-slow"></div>
+          <div className="absolute -bottom-24 -right-24 w-[600px] h-[600px] bg-primary-300/20 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIwLjUiIG9wYWNpdHk9IjAuMDUiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-30"></div>
         </div>
         <div className="max-w-5xl mx-auto text-center relative z-10">
           <motion.div
