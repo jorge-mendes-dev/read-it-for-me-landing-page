@@ -283,45 +283,53 @@ export default function About() {
                 href="https://github.com/jorge-mendes-dev/read-it-for-me"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-gray-800 dark:bg-gray-700 text-white px-6 py-3 rounded-lg hover:bg-gray-700 dark:hover:bg-gray-600 transition-colors"
+                className="group relative inline-flex items-center gap-2 bg-gradient-to-r from-slate-800 to-slate-900 dark:from-slate-700 dark:to-slate-800 text-white px-8 py-4 rounded-enterprise hover:from-slate-700 hover:to-slate-800 dark:hover:from-slate-600 dark:hover:to-slate-700 transition-all duration-500 font-semibold shadow-medium hover:shadow-enterprise border border-slate-700/50 overflow-hidden"
                 variants={fadeInUp}
-                whileHover={{ scale: 1.05, y: -2 }}
+                whileHover={{ scale: 1.05, y: -3 }}
                 whileTap={{ scale: 0.95 }}
               >
-                ⭐ View on GitHub
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
+                <span className="relative z-10 text-xl group-hover:scale-110 transition-transform">⭐</span>
+                <span className="relative z-10">View on GitHub</span>
               </motion.a>
               <motion.a
                 href="https://addons.mozilla.org/firefox/addon/read-it-for-me/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors"
+                className="group relative inline-flex items-center gap-2 bg-gradient-to-r from-primary-600 to-secondary-600 text-white px-8 py-4 rounded-enterprise hover:from-primary-700 hover:to-secondary-700 transition-all duration-500 font-semibold shadow-medium hover:shadow-glow border border-primary-500/30 overflow-hidden"
                 variants={fadeInUp}
-                whileHover={{ scale: 1.05, y: -2 }}
+                whileHover={{ scale: 1.05, y: -3 }}
                 whileTap={{ scale: 0.95 }}
               >
-                🦊 Get Firefox Add-on
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
+                <span className="relative z-10 text-xl group-hover:scale-110 transition-transform">🦊</span>
+                <span className="relative z-10">Get Firefox Add-on</span>
               </motion.a>
               <motion.a
                 href="https://chromewebstore.google.com/detail/boclnpmpcbbighifbndbkijpkcodddda?utm_source=item-share-cb"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+                className="group relative inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-enterprise hover:from-blue-700 hover:to-indigo-700 transition-all duration-500 font-semibold shadow-medium hover:shadow-glow border border-blue-500/30 overflow-hidden"
                 variants={fadeInUp}
-                whileHover={{ scale: 1.05, y: -2 }}
+                whileHover={{ scale: 1.05, y: -3 }}
                 whileTap={{ scale: 0.95 }}
               >
-                🌐 Get Chrome Extension
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
+                <span className="relative z-10 text-xl group-hover:scale-110 transition-transform">🌐</span>
+                <span className="relative z-10">Get Chrome Extension</span>
               </motion.a>
               <motion.a
                 href="https://buymeacoffee.com/jorge.mendesdev"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-yellow-400 text-gray-900 px-6 py-3 rounded-lg hover:bg-yellow-300 transition-colors font-semibold"
+                className="group relative inline-flex items-center gap-2 bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-400 text-slate-900 px-8 py-4 rounded-enterprise hover:from-yellow-300 hover:via-amber-300 hover:to-yellow-300 transition-all duration-500 font-bold shadow-medium hover:shadow-glow-lg border-2 border-yellow-500/30 overflow-hidden"
                 variants={fadeInUp}
-                whileHover={{ scale: 1.1, rotate: [0, -3, 3, 0] }}
+                whileHover={{ scale: 1.08, rotate: [0, -2, 2, 0] }}
                 whileTap={{ scale: 0.95 }}
               >
-                ☕ Buy Me a Coffee
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
+                <span className="relative z-10 text-xl group-hover:scale-110 group-hover:rotate-12 transition-transform">☕</span>
+                <span className="relative z-10">Buy Me a Coffee</span>
               </motion.a>
             </motion.div>
           </div>

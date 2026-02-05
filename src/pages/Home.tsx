@@ -425,22 +425,25 @@ export default function Home() {
               >
                 <button
                   onClick={() => toggleFaq(i)}
-                  className="w-full text-left p-8 flex items-start justify-between hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors duration-300"
+                  className="group w-full text-left p-8 flex items-start justify-between hover:bg-gradient-to-r hover:from-slate-50 hover:to-primary-50/30 dark:hover:from-slate-700/50 dark:hover:to-primary-900/20 transition-all duration-300"
                 >
-                  <h3 className="text-lg font-semibold text-slate-900 dark:text-white flex items-start flex-1 leading-relaxed">
-                    <span className="text-purple-600 dark:text-purple-400 mr-2">Q:</span>
+                  <h3 className="text-lg font-semibold text-slate-900 dark:text-white flex items-start flex-1 leading-relaxed group-hover:text-primary-700 dark:group-hover:text-primary-400 transition-colors">
+                    <span className="text-primary-600 dark:text-primary-400 mr-3 font-bold">Q:</span>
                     {faq.question}
                   </h3>
-                  <motion.svg
-                    className="w-6 h-6 text-purple-600 dark:text-purple-400 flex-shrink-0 ml-4"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    animate={{ rotate: openFaqIndex === i ? 180 : 0 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </motion.svg>
+                  <motion.div className="flex-shrink-0 ml-4 w-8 h-8 rounded-lg bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center group-hover:bg-primary-200 dark:group-hover:bg-primary-800/50 transition-colors">
+                    <motion.svg
+                      className="w-5 h-5 text-primary-600 dark:text-primary-400"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={2.5}
+                      animate={{ rotate: openFaqIndex === i ? 180 : 0 }}
+                      transition={{ duration: 0.3, type: "spring" }}
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                    </motion.svg>
+                  </motion.div>
                 </button>
                 <motion.div
                   initial={false}
