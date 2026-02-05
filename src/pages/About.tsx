@@ -1,19 +1,7 @@
 import { motion } from 'framer-motion'
 import expandedPlayerImg from '../assets/expanded player.png'
 import configImg from '../assets/config.png'
-
-const fadeInUp = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 }
-}
-
-const stagger = {
-  visible: {
-    transition: {
-      staggerChildren: 0.1
-    }
-  }
-}
+import { fadeInUp, stagger } from '../constants/animations'
 
 export default function About() {
   return (
